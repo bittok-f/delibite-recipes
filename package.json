@@ -1,0 +1,20 @@
+{
+  "name": "delibite",
+  "version": "1.0.0",
+  "description": "Recipe App",
+  "main": "js/script.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Francis Bittok",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "^2.6.2"
+  },
+  "dependencies": {
+    "core-js": "^3.25.1",
+    "regenerator-runtime": "^0.13.9"
+  }
+}

@@ -1,0 +1,110 @@
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--color-secondary);
+  padding: 0 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  color: var(--font-light-grey);
+  font-size: 1.5rem;
+  background-color: var(--color-accent);
+  border: none;
+  gap: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+
+  &__name {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__icon {
+    height: 4rem;
+    width: 4rem;
+    fill: currentColor;
+    transition: all 0.2s ease-in-out;
+
+    @media only screen and (max-width: $bp-small) {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  &:hover > &__icon {
+    fill: var(--color-secondary);
+  }
+
+  &__info {
+    display: grid;
+    place-content: center;
+    height: 3rem;
+    font-size: 2rem;
+    width: 3rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: var(--color-secondary);
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &:hover {
+    background-color: var((--color-accent-dark-1));
+  }
+}
+.recipe {
+  &__btn {
+    height: 6rem;
+    width: 6rem;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--color-accent);
+
+    &:hover {
+      background-color: var(--font-light-grey);
+    }
+
+    &:hover > .recipe__bookmark--btn {
+      fill: var(--color-accent);
+    }
+
+    &--calc {
+      display: grid;
+      place-content: center;
+      background-color: var(--color-accent-opacity);
+    }
+  }
+
+  &__bookmark--btn {
+    height: 4rem;
+    width: 4rem;
+    fill: var(--font-light-grey);
+  }
+
+  &__info--btn {
+    display: flex;
+    gap: 0.5rem;
+  }
+}

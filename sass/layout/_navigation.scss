@@ -1,0 +1,59 @@
+.nav {
+  position: relative;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__btn {
+    padding: 0.5rem 2rem;
+    height: 5rem;
+    @media only screen and (max-width: $bp-small) {
+      height: 4rem;
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (max-width: 450px) {
+      height: 4rem;
+      font-size: 1.2rem;
+      padding: 0.5rem;
+    }
+  }
+
+  &__btn--bookmark:hover + .bookmarks,
+  .bookmarks:hover {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__btn--plan-recipe:hover + .plan,
+  .plan:hover {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.bookmarks {
+  position: absolute;
+  top: calc(100% + 1rem);
+  right: 0;
+  max-width: max-content;
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--font-light-grey);
+  box-shadow: var(--box-shadow-dark);
+  transition: all 0.2s ease-in-out;
+  z-index: 10000;
+
+  @media only screen and (max-width: 450px) {
+    width: min-content;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

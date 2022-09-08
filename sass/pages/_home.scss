@@ -1,0 +1,251 @@
+.container {
+  min-height: 100vh;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  background-color: var(--font-light-grey);
+}
+.content {
+  min-height: calc(100vh - 8rem);
+  width: 100%;
+  display: flex;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+}
+
+.recipe {
+  min-height: calc(100vh - 8vh);
+  width: 75vw;
+  padding: 0 1rem;
+  background-color: var(--color-primary-opacity);
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 100%;
+  }
+
+  &__container {
+    height: 45rem;
+    padding-top: 1rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 35rem;
+    }
+  }
+
+  &__icon--description {
+    height: 2.75rem;
+    width: 2.75rem;
+    fill: var(--color-secondary);
+    transition: all 0.3s ease-in-out;
+
+    span {
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__figure {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      inset: 0;
+      background-image: linear-gradient(
+        to right top,
+        var(--color-primary),
+        var(--color-primary-light-1)
+      );
+      opacity: 0.5;
+    }
+  }
+
+  &__img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__details {
+    position: absolute;
+    width: 100%;
+    top: 85%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      top: 80%;
+    }
+  }
+
+  &__title {
+    flex: 1;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    @include textTrunc(min-content);
+    @include backgroundTheme;
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  &__nav {
+    width: 15rem;
+    display: flex;
+    padding: 0.5rem 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow-dark);
+  }
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-size: 1.7rem;
+    text-transform: uppercase;
+
+    &--list {
+      height: 3rem;
+      width: 3rem;
+    }
+
+    span {
+      color: var(--color-secondary-dark-2);
+    }
+  }
+
+  &__composition {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow-dark);
+    z-index: 100;
+
+    &--details {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      width: max-content;
+    }
+
+    &--type {
+      font-size: 1.6rem;
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__icon--check {
+    fill: var(--color-secondary);
+  }
+  &__ingredients {
+    font-size: 1.8rem;
+    padding: 2rem 0;
+    &--list {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    &--item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      position: relative;
+    }
+  }
+
+  &__instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    line-height: 2;
+
+    &--owner {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        height: 5px;
+        width: 110%;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: linear-gradient(
+          to left bottom,
+          var(--color-primary-opacity),
+          var(--color-primary-dark-1),
+          var(--color-primary-opacity)
+        );
+      }
+    }
+
+    &--btn {
+      width: max-content;
+      display: flex;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: var(--font-light-grey);
+      background-color: var(--color-accent);
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.2s ease-in-out;
+
+      &:hover > .recipe__icon--instructions {
+        fill: var(--color-secondary);
+      }
+      &:hover {
+        background-color: var(--color-accent-dark-1);
+      }
+
+      span {
+        background-image: none;
+        color: var(--font-light-grey);
+      }
+    }
+  }
+
+  &__icon--instructions {
+    height: 4rem;
+    width: 4rem;
+    fill: currentColor;
+    transition: all 0.2s ease-in-out;
+  }
+}

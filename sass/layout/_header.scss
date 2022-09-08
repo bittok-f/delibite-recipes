@@ -1,0 +1,140 @@
+.header {
+  padding: 0 1rem;
+  height: 8rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(
+    to right top,
+    var(--color-primary-opacity),
+    var(--color-primary-opacity)
+  );
+  margin-bottom: 1rem;
+
+  z-index: 10000;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+
+    &--icon {
+      height: 5rem;
+      width: 5rem;
+      fill: var(--color-primary);
+    }
+  }
+  &__title {
+    font-size: 3rem;
+    background-image: linear-gradient(
+      to right,
+      var(--color-primary-dark-2),
+      var(--color-secondary-dark-2)
+    );
+    font-family: var(--font-heading);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
+.search {
+  display: flex;
+  font-size: 1.7rem;
+  align-items: center;
+
+  &__input {
+    font: inherit;
+    border-radius: 10rem;
+    height: 5rem;
+    width: 40rem;
+    padding: 0 3rem;
+    outline: none;
+    border: 1px solid var(--color-primary);
+    background-color: var(--font-light-grey);
+    transition: all 0.3s ease-in-out;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 30rem;
+      padding: 0 1rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 25rem;
+      font-size: 1.4rem;
+      height: 3.5rem;
+    }
+
+    @media only screen and (max-width: 450px) {
+      width: 20rem;
+      font-size: 1.2rem;
+      height: 3.5rem;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: #fff;
+    }
+
+    &:focus ~ .search__btn > .search__icon {
+      fill: var(--color-secondary);
+      animation: burst 0.5s linear alternate;
+      animation-iteration-count: 1;
+    }
+
+    @keyframes burst {
+      to {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    &::placeholder {
+      font-size: 1.8rem;
+      color: var(--color-secondary);
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__btn {
+    border-radius: 10rem;
+    border: none;
+    padding: 0;
+    margin-left: -5rem;
+    background-color: transparent;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-left: -3.5rem;
+    }
+
+    &:hover {
+      background-color: var(--color-primary-opacity-1);
+    }
+
+    &:hover > .search__icon {
+      fill: var(--color-primary);
+    }
+  }
+
+  &__icon {
+    height: 5rem;
+    width: 5rem;
+    fill: var(--color-primary);
+    transition: all 0.2s ease-in-out;
+
+    @media only screen and (max-width: $bp-small) {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+  }
+}

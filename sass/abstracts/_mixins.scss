@@ -1,0 +1,24 @@
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin backgroundTheme {
+  background-image: linear-gradient(
+    to left,
+    var(--color-primary-dark-2),
+    var(--color-secondary-dark-2),
+    var(--color-accent-dark-2)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin textTrunc($max-width) {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: $max-width;
+}

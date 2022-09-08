@@ -1,0 +1,39 @@
+:root {
+  --color-primary: #d22913;
+  --color-primary-light-1: #ff7967;
+  --color-primary-light-2: #eb4f3b;
+  --color-primary-dark-1: #aa1804;
+  --color-primary-dark-2: #820f00;
+  --color-primary-opacity: rgba(210, 41, 19, 0.2);
+  --color-primary-opacity-1: rgba(210, 41, 19, 0.4);
+
+  --color-secondary: #0e9d34;
+  --color-secondary-light-1: #4ec06c;
+  --color-secondary-light-2: #2caf4e;
+  --color-secondary-dark-1: #037f24;
+  --color-secondary-dark-2: #00611a;
+  --color-secondary-opacity: rgba(14, 157, 52, 0.6);
+
+  --color-accent: #af105b;
+  --color-accent-light-1: #d65793;
+  --color-accent-light-2: #c43176;
+  --color-accent-dark-1: #8e0445;
+  --color-accent-dark-2: #6c0033;
+  --color-accent-opacity: rgba(175, 16, 91, 0.2);
+
+  --font-light-grey: rgb(237, 237, 237);
+  --font-mid-grey: rgb(153, 153, 153);
+  --font-dark-grey: rgb(38, 38, 38);
+
+  --font-heading: 'Cookie', cursive;
+
+  --box-shadow-dark: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+
+  --container-max-width: 160rem;
+}
+
+//Breakpoints
+$bp-large: 78.15em; // 1250px
+$bp-medium: 61.25em; // 980px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sass/main.scss" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <script type="module" defer src="js/script.js"></script>
+    <title>DeliBite</title> 
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__logo">
+          <svg class="header__logo--icon">
+            <use href="assets/sprite.svg#icon-spoon-knife"></use>
+          </svg>
+          <h1 class="header__title">DeliBite</h1>
+        </div>
+
+        <form action="search" class="search">
+          <input
+            type="search"
+            class="search__input"
+            placeholder="search for any recipe..."
+            autocomplete="off"
+          />
+          <button class="btn search__btn">
+            <svg class="search__icon">
+              <use href="assets/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item nav__item--bookmark">
+              <button class="btn nav__btn nav__btn--bookmark">
+                <svg class="btn__icon">
+                  <use href="assets/sprite.svg#icon-bookmark-fill"></use>
+                </svg>
+                <span class="btn__name">Bookmarks</span>
+                <span class="btn__info btn__info--bookmark"></span>
+              </button>
+
+              <div class="bookmarks">
+                <div class="info">
+                  <div>
+                    <svg class="info__icon">
+                      <use href="assets/sprite.svg#icon-emoji-happy"></use>
+                    </svg>
+                  </div>
+                  <p class="info__msg">
+                    No bookmarks yet. Find a recipe you love and add it to your
+                    bookmarks!
+                  </p>
+                </div>
+                <ul class="bookmarks__list">
+                  <!-- <li class="overview">
+                    <a
+                      class="overview__link overview__link--active"
+                      href="#23456"
+                    >
+                      <figure class="overview__img">
+                        <img
+                          src="https://spoonacular.com/recipeImages/656329-556x370.jpg"
+                          alt="recipe-img"
+                        />
+                      </figure>
+                      <div class="overview__info">
+                        <p class="overview__title">
+                          Creamy pizza by Francis Kimutai Bittok
+                        </p>
+                      </div>
+                    </a>
+                  </li> -->
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content">
+        <aside class="result">
+          <!-- <div class="loader">
+            <h1 class="header__title">D B</h1>
+          </div> -->
+          <ul class="result__list">
+            <div class="info">
+              <div>
+                <svg class="info__icon">
+                  <use href="assets/sprite.svg#icon-emoji-happy"></use>
+                </svg>
+              </div>
+              <p class="info__msg">
+                Start by searching for your favourite recipe. Your search
+                results will appear here!
+              </p>
+            </div>
+
+            <!-- <li class="overview">
+              <a class="overview__link" href="#716300">
+                <figure class="overview__img">
+                  <img
+                    src="https://spoonacular.com/recipeImages/654883-556x370.jpg"
+                    alt="recipe-img"
+                  />
+                </figure>
+                <div class="overview__info">
+                  <p class="overview__title">
+                    Creamy pizza by Francis Kimutai Bittok
+                  </p>
+                </div>
+              </a>
+            </li> -->
+          </ul>
+
+          <div class="pagination">
+            <!-- <div class="pagination__btn previous">
+              <button
+                class="pagination__btn--goto pagination__btn--prev"
+                data-goto="1"
+              >
+                <svg
+                  class="pagination__btn--icon pagination__btn--icon-previous"
+                >
+                  <use href="assets/sprite.svg#icon-chevron-small-left"></use>
+                </svg>
+
+                <p>Page 2 of<span> 5</span></p>
+              </button>
+            </div>
+
+            <div class="pagination__btn next">
+              <button
+                class="pagination__btn--goto pagination__btn--next"
+                data-goto="2"
+              >
+                <p>Page 3 of <span>5</span></p>
+
+                <svg class="pagination__btn--icon pagination__btn--icon-next">
+                  <use href="assets/sprite.svg#icon-chevron-small-right"></use>
+                </svg>
+              </button>
+            </div> -->
+          </div>
+
+          <div class="copyright  copyright__large>
+            <p class="copyright__text">
+              Copyright &copy; 2022 | BiT. Inc |
+              <a
+                target="_blank"
+                href="https://twitter.com/Bittok_f"
+                class="copyright__link"
+                >Francis Bittok</a
+              >
+            </p>
+          </div>
+        </aside>
+
+        <main class="recipe">
+          <!-- <div class="loader">
+            <h1 class="header__title">D B</h1>
+          </div> -->
+
+          <!-- <div class="info info__error">
+            <div>
+              <svg class="info__icon">
+                <use href="assets/sprite.svg#icon-warning"></use>
+              </svg>
+            </div>
+            <p class="info__msg">
+              No recipes found for your search. Please try again!
+            </p>
+          </div> -->
+
+          <div class="recipe__container">
+          
+
+         
+        </main>
+        <div class="copyright copyright__small">
+          <p class="copyright__text">
+            Copyright &copy; 2022 | BiT. Inc |
+            <a
+              target="_blank"
+              href="https://twitter.com/Bittok_f"
+              class="copyright__link"
+              >Francis Bittok</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
